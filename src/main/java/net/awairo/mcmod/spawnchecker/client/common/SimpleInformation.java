@@ -13,17 +13,15 @@
 
 package net.awairo.mcmod.spawnchecker.client.common;
 
-import static com.google.common.base.Preconditions.*;
-
-import java.awt.Color;
-
-import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Strings;
-
-import net.minecraft.util.ResourceLocation;
-
 import net.awairo.mcmod.common.v1.util.Colors;
 import net.awairo.mcmod.spawnchecker.client.mode.Mode;
+import net.minecraft.util.ResourceLocation;
+
+import java.awt.*;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * 画面に描画するモードの情報のシンプルな実装.
@@ -207,7 +205,7 @@ public class SimpleInformation implements Mode.Information
     @Override
     public String toString()
     {
-        return Objects.toStringHelper(this)
+        return MoreObjects.toStringHelper(this)
                 .add("color", color)
                 .add("message", message)
                 .add("iconName", iconResourceName)

@@ -11,12 +11,11 @@
 
 package net.awairo.mcmod.common.v1.client.gui;
 
-import static com.google.common.base.Preconditions.*;
-
-import com.google.common.base.Objects;
-
+import com.google.common.base.MoreObjects;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.resources.I18n;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * GuiButton wrapper.
@@ -68,7 +67,7 @@ public class Button extends GuiButton
     @Override
     public String toString()
     {
-        return Objects.toStringHelper(this)
+        return MoreObjects.toStringHelper(this)
                 .add("context", context())
                 .add("id", id)
                 .add("x", xPosition)
